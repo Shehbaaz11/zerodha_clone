@@ -1,0 +1,76 @@
+/* Login.css */
+
+.auth-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #3b3b5b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  .auth-form {
+    background-color: #fff;
+    padding: 30px 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .auth-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-form label {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .auth-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  
+  .auth-form button {
+    padding: 10px;
+    background-color: #4b57d2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-form button:hover {
+    background-color: #3644b2;
+  }
+  
+  .auth-form span {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .auth-form a {
+    color: #4b57d2;
+    text-decoration: none;
+  }
+  
+  .auth-form a:hover {
+    text-decoration: underline;
+  }
+  
