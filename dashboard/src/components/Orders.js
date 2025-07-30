@@ -8,7 +8,7 @@ const Orders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allOrders").then((res) => {
+    axios.get("https://zerodha-backend-tija.onrender.com/allOrders").then((res) => {
       setOrders(res.data);
     });
   }, []);
@@ -16,7 +16,7 @@ const Orders = () => {
 
   const handleDelete = async (id)=>{
  try{
-    await axios.delete(`http://localhost:3002/deleteOrder/${id}`)
+    await axios.delete(`https://zerodha-backend-tija.onrender.com/deleteOrder/${id}`)
     setOrders((prev) => prev.filter((order) => order._id !== id));
  }
  catch(err){
