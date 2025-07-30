@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-   "postinstall": "icacls node_modules\\.bin\\react-scripts /grant Everyone:F"
+    "prepare": "chmod +x node_modules/.bin/react-scripts"
+ 
   },
   "eslintConfig": {
     "extends": [
