@@ -9,7 +9,7 @@ const Holdings = () => {
   const [allHolding,setallHolding] = useState([]);  //yeh data database se frontend me arra hai
 
   useEffect(()=>{
-    axios.get('http://localhost:3002/allHoldings').then((res)=>{
+    axios.get('https://zerodha-backend-tija.onrender.com/allHoldings').then((res)=>{
       console.log(res.data)
       setallHolding(res.data);
     })
