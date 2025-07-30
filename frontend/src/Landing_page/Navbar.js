@@ -70,7 +70,7 @@ const Navbar = () => {
           <>
             <a
               className="nav-link active"
-              href="https://zerodha-backend-tija.onrender.com"
+              href="https://zerodha-clone-dashboard-r4tg.onrender.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
