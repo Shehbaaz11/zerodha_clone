@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/user/logout", {
+      const res = await axios.get("https://zerodha-backend-tija.onrender.com/user/logout", {
         withCredentials: true,
       });
 
@@ -70,7 +70,7 @@ const Navbar = () => {
           <>
             <a
               className="nav-link active"
-              href="http://localhost:3001"
+              href="https://zerodha-backend-tija.onrender.com"
               target="_blank"
               rel="noopener noreferrer"
             >
