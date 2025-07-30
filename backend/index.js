@@ -19,7 +19,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000","http://localhost:3001"],  // frontend
+  origin: ["http://localhost:3000","http://localhost:3001","https://zerodha-frontend-clone-nf8d.onrender.com"],  // frontend
   credentials: true
 }));
 
