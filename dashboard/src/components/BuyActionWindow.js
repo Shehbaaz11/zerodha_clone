@@ -13,7 +13,7 @@ const [quantity,setquantity] = useState(1);
 const [price,setprice] = useState(0.0)
 
 const handleBuyClick = ()=>{
-  axios.post('http://localhost:3002/newOrder',{
+  axios.post('https://zerodha-backend-tija.onrender.com/newOrder',{
     name: uid,
     qty: quantity,
     price: price ,
