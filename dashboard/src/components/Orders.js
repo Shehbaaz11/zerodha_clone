@@ -10,6 +10,7 @@ const Orders = () => {
   useEffect(() => {
     axios.get("https://zerodha-backend-tija.onrender.com/allOrders").then((res) => {
       setOrders(res.data);
+      console.log("order ->",res.data)
     });
   }, []);
 
