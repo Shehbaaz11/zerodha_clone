@@ -8,9 +8,11 @@ const Orders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("https://zerodha-backend-tija.onrender.com/allOrders").then((res) => {
+    axios.get("https://zerodha-backend-tija.onrender.com/allOrders",{
+      withCredentials:true
+    }).then((res) => {
       setOrders(res.data);
-      withCredentials: true,
+      
       console.log("order ->",res.data)
     });
   }, []);

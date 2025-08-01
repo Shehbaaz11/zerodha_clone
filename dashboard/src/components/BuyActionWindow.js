@@ -17,6 +17,8 @@ const handleBuyClick = ()=>{
     qty: quantity,
     price: price ,
     mode: "BUY",
+  },{
+    withCredentials:true
   })
   GeneralContext.closeBuyWindow();
   navigate("/orders");

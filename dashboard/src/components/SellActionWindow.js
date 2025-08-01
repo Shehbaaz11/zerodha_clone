@@ -19,6 +19,8 @@ const SellActionWindow = ({ uid }) => {
       qty: quantity,
       price: price,
       mode: "SELL", // Changed to SELL
+    },{
+      withCredentials:true
     });
     GeneralContext.closeBuyWindow();
     navigate("/orders");
