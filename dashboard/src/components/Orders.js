@@ -10,6 +10,7 @@ const Orders = () => {
   useEffect(() => {
     axios.get("https://zerodha-backend-tija.onrender.com/allOrders").then((res) => {
       setOrders(res.data);
+      withCredentials: true,
       console.log("order ->",res.data)
     });
   }, []);
@@ -19,6 +20,7 @@ const Orders = () => {
  try{
     await axios.delete(`https://zerodha-backend-tija.onrender.com/deleteOrder/${id}`)
     setOrders((prev) => prev.filter((order) => order._id !== id));
+    
  }
  catch(err){
   console.log(err)

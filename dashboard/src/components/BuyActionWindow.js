@@ -1,8 +1,7 @@
 import React, { use, useState } from "react";
 import { Link } from "react-router-dom";
-
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
@@ -11,7 +10,7 @@ const BuyActionWindow = ({ uid }) => {
 
 const [quantity,setquantity] = useState(1);
 const [price,setprice] = useState(0.0)
-
+const navigate = useNavigate();
 const handleBuyClick = ()=>{
   axios.post('https://zerodha-backend-tija.onrender.com/newOrder',{
     name: uid,
@@ -20,6 +19,7 @@ const handleBuyClick = ()=>{
     mode: "BUY",
   })
   GeneralContext.closeBuyWindow();
+  navigate("/orders");
 }
 
   const handleCancelClick = () => {

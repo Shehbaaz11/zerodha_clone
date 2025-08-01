@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css"; // Reuse same styling
 
+
 const SellActionWindow = ({ uid }) => {
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(0.0);
+  const navigate = useNavigate();
 
   const handleSellClick = () => {
     axios.post("https://zerodha-backend-tija.onrender.com/newOrder", {
@@ -19,6 +21,8 @@ const SellActionWindow = ({ uid }) => {
       mode: "SELL", // Changed to SELL
     });
     GeneralContext.closeBuyWindow();
+    navigate("/orders");
+
   };
 
   const handleCancelClick = () => {
