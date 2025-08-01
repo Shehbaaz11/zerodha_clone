@@ -52,7 +52,7 @@ const Home = () => {
       <Pricing />
       <Education />
       <OpenAccount />
-      <Footer />
+      
 
       <ToastContainer />
     </>
