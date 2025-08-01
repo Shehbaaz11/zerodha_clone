@@ -7,16 +7,16 @@ import "./Orders.css"
 const Orders = () => {
   const [orders, setOrders] = useState([]);
 
+
   useEffect(() => {
-    axios.get("https://zerodha-backend-tija.onrender.com/allOrders",{
-      withCredentials:true
+    axios.get("https://zerodha-backend-tija.onrender.com/allOrders", {
+      withCredentials: true
     }).then((res) => {
       setOrders(res.data);
-      
-      console.log("order ->",res.data)
+      console.log("order ->", res.data);
     });
   }, []);
-
+  
 
   const handleDelete = async (id)=>{
  try{
