@@ -12,7 +12,7 @@ const SellActionWindow = ({ uid }) => {
   const [price, setPrice] = useState(0.0);
   const navigate = useNavigate();
 
- const {closeBuyWindow} = useContext(GeneralContext);
+ const {closeSellWindow} = useContext(GeneralContext);
 
   const handleSellClick = () => {
     axios.post("https://zerodha-backend-tija.onrender.com/newOrder", {
@@ -23,7 +23,7 @@ const SellActionWindow = ({ uid }) => {
     },{
       withCredentials:true
     }).then(()=>{
-      closeBuyWindow();
+       closeSellWindow();
       navigate("/orders");
     }).catch((err)=>{
       console.error("Error placing SELL order:", err);
@@ -32,7 +32,7 @@ const SellActionWindow = ({ uid }) => {
   };
 
   const handleCancelClick = () => {
-  closeBuyWindow();
+  closeSellWindow();
   };
 
   return (
