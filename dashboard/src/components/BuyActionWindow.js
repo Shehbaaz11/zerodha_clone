@@ -26,7 +26,7 @@ const handleBuyClick = ()=>{
 
     closeBuyWindow();
     navigate("/orders");
-  }).catch(()=>{
+  }).catch((err)=>{
        console.error("Error placing Buy order:", err);
        alert("Failed to place buy order. Try again.");
   })
