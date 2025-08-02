@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useState ,useContext} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,9 @@ const BuyActionWindow = ({ uid }) => {
 const [quantity,setquantity] = useState(1);
 const [price,setprice] = useState(0.0)
 const navigate = useNavigate();
+
+const {closeBuyWindow} = useContext(GeneralContext)
+
 const handleBuyClick = ()=>{
   axios.post('https://zerodha-backend-tija.onrender.com/newOrder',{
     name: uid,
@@ -19,13 +22,18 @@ const handleBuyClick = ()=>{
     mode: "BUY",
   },{
     withCredentials:true
+  }).then(()=>{
+
+    closeBuyWindow();
+    navigate("/orders");
+  }).catch(()=>{
+       console.error("Error placing Buy order:", err);
+       alert("Failed to place buy order. Try again.");
   })
-  GeneralContext.closeBuyWindow();
-  navigate("/orders");
 }
 
   const handleCancelClick = () => {
-    GeneralContext.closeBuyWindow();
+    closeBuyWindow();
   };
 
   return (
