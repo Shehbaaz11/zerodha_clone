@@ -25,7 +25,7 @@ const SellActionWindow = ({ uid }) => {
     }).then(()=>{
       closeBuyWindow();
       navigate("/orders");
-    }).catch(()=>{
+    }).catch((err)=>{
       console.error("Error placing SELL order:", err);
        alert("Failed to place SELL order. Try again.");
     })
